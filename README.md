@@ -98,13 +98,15 @@ Installed Physical Memory (RAM): 24.0 GB
 ### OS Version
 Windows 11 Pro, Version 22H2, OS Build 22621.608
 Windows Subsystem for Linux Distributions:  Ubuntu-20.04
-uname -r >>> 5.15.57.1-microsoft-standard-WSL2
+
+    uname -r >>> 5.15.57.1-microsoft-standard-WSL2
 
 ### Environment Notes
 I used atomicAdd operations in my implementation using double data types.  Double data types are only supported on hardware with architectures above sm_60.  In my Makefile, I used -arch=native to compile my code.  Native will derive the current GPU architecture used by the device.
 
 Example:
-nvcc **-arch=native** ./src/argparse.cpp ./src/helpers.cpp ./src/io.cpp ./src/kmeans.cpp ./src/kmeans_kernel_shmem.cu ./src/kmeans_kernel.cu ./src/kmeans_thrust.cu -std=c++17 -I ./src/ -o bin/kmeans
+
+    nvcc **-arch=native** ./src/argparse.cpp ./src/helpers.cpp ./src/io.cpp ./src/kmeans.cpp ./src/kmeans_kernel_shmem.cu ./src/kmeans_kernel.cu ./src/kmeans_thrust.cu -std=c++17 -I ./src/ -o bin/kmeans
 
 ## Running The Program
 Run the following in the terminal:
