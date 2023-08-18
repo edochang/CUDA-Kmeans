@@ -107,9 +107,11 @@ Example:
 nvcc **-arch=native** ./src/argparse.cpp ./src/helpers.cpp ./src/io.cpp ./src/kmeans.cpp ./src/kmeans_kernel_shmem.cu ./src/kmeans_kernel.cu ./src/kmeans_thrust.cu -std=c++17 -I ./src/ -o bin/kmeans
 
 ## Running The Program
-./bin/kmeans -k 16 -d 16 -i /home/username/dev/repo/Lab2/tests/input/random-n2048-d16-c16.txt -m 150 -t 0.000001 -s 8675309 -c --use_cpu
+Run the following in the terminal:
+
+    ./bin/kmeans -k 16 -d 16 -i /home/username/dev/repo/Lab2/tests/input/random-n2048-d16-c16.txt -m 150 -t 0.000001 -s 8675309 -c --use_cpu
     
-**./bin/kmeans argument instructions**
+**./bin/kmeans Argument Instructions**
 
     Usage:
         --num_cluster or -k <an integer specifying the number of clusters>
